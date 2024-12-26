@@ -349,8 +349,9 @@ img {
 
 .wrapper {
   position: relative;
-  width: 66rem;
-  height: 45rem;
+  width: 70rem;
+  height: 40rem;
+  padding: 2rem;
 }
 
 .cover {
@@ -366,16 +367,19 @@ img {
   transform-origin: right;
 }
 
-.turn {
+.cover-left {
+  right: 0;
+}
+
+.cover-right.turn {
   transform: rotateY(180deg);
 }
 
 .book {
   position: relative;
   display: flex;
-  padding: 0.7rem 0.5rem;
-  width: calc(100% - 1rem);
-  height: calc(100% - 1.4rem);
+  width: 100%;
+  height: 100%;
 }
 
 .book-page {
@@ -462,6 +466,11 @@ img {
   margin: 0 1rem;
 }
 
+.btn:hover {
+  background-color: transparent;
+  color: #00abf0;
+}
+
 .btn-box .btn:nth-child(2) {
   background-color: transparent;
   color: #00abf0;
@@ -470,4 +479,178 @@ img {
 .btn-box .btn:nth-child(2):hover {
   background-color: #00abf0;
   color: #fff;
+}
+
+.page-right {
+  position: absolute;
+  right: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+}
+
+.page-right.turn {
+  transform: rotateY(-180deg);
+}
+
+.page-front, .page-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #fff, #ddd);
+  padding: 1.5rem 2rem;
+  backface-visibility: hidden;
+}
+
+.page-front {
+  transform: rotateY(0deg);
+}
+
+.page-back {
+  transform: rotateY(180deg);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.workeduc-box {
+  border-left: 2px solid #00abf0;
+}
+
+.workeduc-content {
+  padding-left: 1.6rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.workeduc-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.62rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #00abf0;
+  border-radius: 50%;
+}
+
+.workeduc-content .year {
+  color: #00abf0;
+}
+
+.workeduc-content .year i {
+  margin-right: 0.6rem;
+}
+
+.number-page {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nextprev-btn {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #555;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+}
+.nextprev-btn:hover {
+  color: #00abf0;
+}
+
+.nextprev-btn.back {
+  left: 1.5rem;
+}
+
+.services-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.services-box .services-content {
+  flex: 1 1 10rem;
+  border: 2px solid #00abf0;
+  border-radius: 0.5rem;
+  padding: 0.8rem 0.5rem 1.1rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.services-box .services-content:hover {
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.services-content i {
+  font-size: 2.5rem;
+  color: #00abf0;
+}
+
+.services-content h3 {
+  font-size: 1.1rem;
+}
+
+.services-content p {
+  margin: 0.2rem 0 0.8rem;
+}
+
+.services-content .btn {
+  width: 8rem;
+  height: 2.5rem;
+}
+
+.skills-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills-box .skills-content {
+  flex: 1 1 20rem;
+}
+
+.skills-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.skills-content .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skills-content .content span {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 5rem;
+  min-height: 4rem;
+  padding: 0.4rem;
+  border: 2px solid #00abf0;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  transition: all 0.3s linear;
+}
+.skills-content .content span:hover {
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.skills-content .content span i {
+  font-size: 1rem;
+  color: #00abf0;
 }
