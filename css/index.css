@@ -772,3 +772,18 @@ img {
   transform: translateX(-50%) scale(1);
   top: -1.8rem;
 }
+
+.modal-warning {
+  position: absolute;
+  left: 10vw;
+  top: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+@media (min-width: 1090px) {
+  .modal-warning {
+    display: none;
+  }
+}
